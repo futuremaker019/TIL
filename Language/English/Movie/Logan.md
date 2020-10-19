@@ -1,4 +1,4 @@
-world is not the same as it was. we are taking risk handing around here
+world is not the same as it was. we are taking risk hanging around here
 
 Can we show our appreciation and treat the three of you to a decent meal?
 
@@ -15,3 +15,7 @@ Vacation? well long overdue.
 I got kick out a few times. I wish i could say you were a good pupil. but the words would choke me.
 
 we have a long drive ahead of us
+
+let me get my dad settled.
+
+this is what life looks like.
