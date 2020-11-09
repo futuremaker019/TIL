@@ -32,3 +32,14 @@
     - apply & restart 클릭 후, 컴퓨터를 재부팅하자
 5. powershell에서 wsl 입력 시, 해당 리눅스 우분투로 이동한다.
     - exit를 치면 다시 돌아옴
+
+<br>
+
+### wsl에서 root 계정 비번 초기화 방법
+- powershell을 관리자 권한으로 실행한다.
+- 다음 명령어 입력하여 초기화 진행
+  - ubuntu1804 config --default-user root
+  - 현재 설치된 버전이 18.04버전이므로 뒤에 18.04를 붙여준다.
+
+- 명령어 입력 후 wsl 접속 시, root 계정으로 바로 접속이 된다.
+- passwd root 명령어로 root 계정의 비번을 재설정해준다.
