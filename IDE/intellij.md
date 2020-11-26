@@ -5,3 +5,4 @@
 
 제안 보기 : alt + enter
 
+To project explorer : alt + F1
