@@ -6,3 +6,6 @@
 제안 보기 : alt + enter
 
 To project explorer : alt + F1
+
+project explorer에서 현재 페이지의 위치 확인
+- F2
