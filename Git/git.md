@@ -48,5 +48,11 @@ git commit --amend "변경을 원하는 로그 작성"
     - conflicts 발생
         - 모든 conflicts를 수정하고 commit 해준다.
 
-
-    
+### gitignore를 추가해도 ignore 되지 않는다.
+- cache 지우고 다시 커밋하기
+```
+git rm -r --cached
+git add .gitignore
+git commit -m "gitignore added"
+git push
+```
