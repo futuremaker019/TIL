@@ -8,12 +8,22 @@
 ```vim
 git branch branch명
 ```
+
 <br>
 
 - 브랜치 확인
 ```vim
 git branch
 ```
+- 명령어 사용하며 원격 저장소의 모든 branch의 명령어를 보여준다.
+```vim
+git branch -r 
+```
+- 로컬, 원격 모든 저장소의 branch의 리스트를 보여준다.
+```vim
+git branch -a
+```            
+
 <br>
 
 - 브랜치로 이동
@@ -49,7 +59,7 @@ git branch -m {변경 전 branch명} {변경하고 싶은 branch명}
 - - 원격 저장소에 올렸을 때 ([참고사이트](https://thdev.tech/git/2016/12/19/Git-Branch-Name-Change/))
 ```vim
  - git branch -m {old branch명} {new branch명}
- - git push origin :{old branch명}
+ - git push origin :{old branch명}   // 콜론을 넣는것에 유의하자
  - git push --set-upstream origin {new branch명}
 ```
 
@@ -61,11 +71,20 @@ git log --branches -- graph -- decorate -- oneline
 ```
 <br>
 
+
+### 클론
+---
+- 일반적인 클론
+```vim
+git clone github 주소
+```
+
 - 전체 브랜치를 클론하지 않고 특정 브랜치만 클론
 ```vim
 git clone -b {branch_name} --single-branch {저장소 URL}
 ```
-<br>
+
+
 
 <br><br>
 
