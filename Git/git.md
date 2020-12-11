@@ -1,4 +1,5 @@
 ## 사용해보고 정리한 git 명령어
+
 <br>
 
 ### 브랜치
@@ -7,6 +8,11 @@
 - 브랜치 생성
 ```vim
 git branch branch명
+```
+
+- 브랜치 생성 및 checkout 동시에 실행
+```vim
+git checkout -b 생성할 branch명
 ```
 
 <br>
@@ -96,7 +102,7 @@ git clone -b {branch_name} --single-branch {저장소 URL}
 git commit --amend "변경을 원하는 로그 작성"
 ```
 
-<br>
+<br><br>
 
 
 
@@ -123,3 +129,35 @@ git rm --cached -r .
 ```vim
 git rm -r {파일명}
 ```
+
+<br><br>
+
+### GitHub and Remote Repository
+- Remote를 만드는 문법, push를 하기 위한 준비 단계
+```vim
+git remote add origin (repository URL)
+```
+- Remote repository에 posh
+```vim
+git push -u origin master
+
+-u : Remote Repositiry에 최초 master branch를 push할 때 붙여준다.
+
+- origin : name of remote
+- master : name of branch
+```
+- 강제 push
+```vim
+git push -f origin master
+```
+
+<br><br>
+
+### Upsteam
+- Upstream이란
+    - 다른 사람의 GitHub의 저장소를 Fork한 경우 내 Github가 origin이 된다. 처음 fork를 시도한 저장소를 upstream이라고 부른다. origin과 upstream 모두 romote 저장소이다. 보통 origin과 구분하기 위해서 upstream 이라는 명칭을 주로 사용한다.
+
+
+<br><br>
+
+<img src="./image/git-flow.png" width="650">
