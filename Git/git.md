@@ -60,6 +60,14 @@ git branch -d
 ```vim
 git branch -m {변경 전 branch명} {변경하고 싶은 branch명}
 ```
+
+- push 전에 Master branch의 이름 변경
+    - 원격 저장소에서 master 브랜치의 이름을 다르게 지정했다면 처음 push할때 master 브랜치의 이름을 변경해주어야 한다.
+        - 이름을 변경하지 않으면 2개의 origin이 생성된다.
+        - Repository 생성 시, 기본 브랜치의 이름을 설정해주는 항목이 추가되었다. 고려하자.
+```
+git branch -M main
+```
 <br>
 
 - - 원격 저장소에 올렸을 때 ([참고사이트](https://thdev.tech/git/2016/12/19/Git-Branch-Name-Change/))
