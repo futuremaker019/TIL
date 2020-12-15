@@ -29,3 +29,6 @@ project explorer에서 현재 페이지의 위치 확인
 - 메서드 생성
     - 메서드를 생성하고자하는 코드 선택 후
         - ctrl + alt + m
+
+- project explorer
+    - alt + 1
