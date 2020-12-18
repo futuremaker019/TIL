@@ -32,3 +32,6 @@ project explorer에서 현재 페이지의 위치 확인
 
 - project explorer
     - alt + 1
+
+- 이전 클래스로 이동
+    - ctrl + e + enter
