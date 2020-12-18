@@ -141,6 +141,7 @@ git rm -r {파일명}
 <br><br>
 
 ### GitHub and Remote Repository
+---
 - Remote를 만드는 문법, push를 하기 위한 준비 단계
 ```vim
 git remote add origin (repository URL)
@@ -162,6 +163,7 @@ git push -f origin master
 <br><br>
 
 ### Upsteam
+---
 - Upstream이란
     - 다른 사람의 GitHub의 저장소를 Fork한 경우 내 Github가 origin이 된다. 처음 fork를 시도한 저장소를 upstream이라고 부른다. origin과 upstream 모두 romote 저장소이다. 보통 origin과 구분하기 위해서 upstream 이라는 명칭을 주로 사용한다.
 
