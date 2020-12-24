@@ -7,4 +7,6 @@ editor에서 project explorer로, project explorer에서 editor로
 변수명 한번에 변경
 - ctrl + shift + l
 
+한줄 삭제
+- ctrl + shift + k
 
