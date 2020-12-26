@@ -10,3 +10,5 @@ editor에서 project explorer로, project explorer에서 editor로
 한줄 삭제
 - ctrl + shift + k
 
+파일 탐색
+- ctrl + e
