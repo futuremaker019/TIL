@@ -1,0 +1,50 @@
+/* layout */
+#header {
+  height: 327px;
+  background: url(../img/header_bg.png) repeat-x center top;
+}
+
+/* container */
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  /* 영역 확인용 background*/
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* quick */
+.quick {
+  text-align: right;
+}
+.quick a {
+  display: inline-block;
+  color: #ffffff;
+  padding: 5px 0 0 10px;
+  transition: all 0.5s ease;
+}
+
+.quick a:hover {
+  color: #ccc;
+}
+
+/* media query */
+@media (max-width: 1280px) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+}
+
+@media (max-width: 960px) {
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 600px) {
+}
+
+@media (max-width: 480px) {
+}

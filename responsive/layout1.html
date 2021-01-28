@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout1</title>
+    <style>
+        #wrap {
+            width: 960px;
+            height: 800px;
+            /* 블록 구조를 가운데 오게 만들어준다. */
+            margin: 0 auto;
+            color: #FFF;
+            text-align: center;
+            font-size: 30px;
+            line-height: 100px;
+        }
+
+        #header {
+            width: 960px;
+            height: 100px;
+            background-color: #111;
+            line-height: 100px;
+        }
+
+        #nav {
+            width: 960px;
+            height: 100px;
+            background-color: #222;
+            line-height: 100px;
+        }
+
+        #sidebar {
+            width: 360px;
+            height: 500px;
+            background-color: #333;
+            float: left;
+            line-height: 500px;
+        }
+
+        #contents {
+            width: 600px;
+            height: 500px;
+            background-color: #444;
+            float: left;
+            line-height: 500px;
+        }
+
+        #footer {
+            width: 960px;
+            height: 100px;
+            background-color: #555;
+            clear: both;
+            line-height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <div id="wrap">
+        <div id="header">header</div>
+        <div id="nav">nav</div>
+        <div id="sidebar">sidebar</div>
+        <div id="contents">contents</div>
+        <div id="footer">footer</div>
+    </div>
+
+</body>
+
+</html>
