@@ -1,7 +1,10 @@
 /* layout */
 #header {
   height: 327px;
-  background: url(../img/header_bg.png) repeat-x center top;
+  background: url(../img/header_bg.png) repeat center top;
+  /* background-repeat: repeat; */
+}
+#nav {
 }
 
 /* container */
@@ -9,7 +12,7 @@
   width: 1200px;
   margin: 0 auto;
   /* 영역 확인용 background*/
-  background: rgba(0, 0, 0, 0.3);
+  /* background: rgba(0, 0, 0, 0.3); */
 }
 
 /* quick */
@@ -27,23 +30,175 @@
   color: #ccc;
 }
 
+/* title */
+.title {
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: 75px;
+}
+.title p {
+  display: inline;
+  font-size: 24px;
+  background-color: #51b0dc;
+  color: #fff;
+  padding: 10px 20px;
+}
+.title h1 a {
+  display: inline-block;
+  background-color: #4a9abf;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 14px;
+  transition: all 0.3s ease-in-out;
+  margin-top: -4px;
+}
+.title h1 a:hover {
+  box-shadow: 0 0 0 3px rgba(75, 154, 191, 0.9) inset,
+    0 0 0 100px rgba(0, 0, 0, 0.1) inset;
+}
+
+/* icon-font */
+.icon-font {
+  text-align: center;
+  margin-top: 40px;
+  padding-bottom: 40px;
+}
+.icon-font ul {
+}
+.icon-font li {
+  /* absolute의 기준이 된다. */
+  position: relative;
+  display: inline;
+}
+.icon-font li a {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  background-color: #3192bf;
+  color: #fff;
+  font-size: 35px;
+  border-radius: 50%;
+  margin: 0 3px;
+}
+.icon-font li a .tool {
+  /* opacity: 0은 해당 .tool (글자)가 보이지 않는다. */
+  opacity: 0;
+  position: absolute;
+  font-size: 12px;
+  left: 50%;
+  top: -70px;
+  background-color: #3192bf;
+  padding: 1px 7px;
+  /* left에 50%를 주면 li를 기준으로 .tool의 글자가 중앙을 기준으로 오른쪽에 위치하게 된다.*/
+  /* tanslateX를 주면 li를 기준으로 글자가 중앙으로 오게 된다. */
+  transform: translateX(-50%);
+  border-radius: 6px 0;
+  /* transition 효과를 주면 글자가 서서히 보이게 된다. */
+  /* 여기에 top을 -70에서 hover시 -60으로 변경하면 위에서 내려오는거 처럼 보여준다. */
+  transition: all 0.3s ease-in-out;
+}
+.icon-font li a:hover .tool {
+  /* opacity: 1을 주면 글자가 보인다. */
+  opacity: 1;
+  /* -70에서 60으로 해주면 hover시 위에서 내려오는 것처럼 보여준다. */
+  top: -60px;
+}
+/* 가상요소 before에 콜론을 하나만 적용하면 explore에도 적용된다. */
+.icon-font li a .tool:before {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  margin-left: -5px;
+  border-top: 5px solid #3192bf;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+}
+
+.ie7 .icon-font {
+  display: none;
+}
+.ie8 .icon-font li a .tool {
+  display: none;
+}
+
+/* nav */
+.nav {
+  padding: 30px 0;
+}
+.nav h2 {
+  font-size: 16px;
+  color: #25a2d0;
+  padding-bottom: 5px;
+}
+.nav li {
+  position: relative;
+  float: left;
+  width: 20%;
+  padding-left: 8px;
+  box-sizing: border-box;
+}
+.nav li:before {
+  content: '';
+  width: 3px;
+  height: 3px;
+  background-color: #25a2d0;
+  position: absolute;
+  left: 0;
+  top: 8px;
+  border-radius: 50%;
+}
+.nav li a {
+  padding: 3px;
+  border-radius 2px;
+  transition: all 0.1s ease
+}
+.nav li a:hover {
+  background-color: #25a2d0;
+  color: #fff;
+}
+
+/* article-title */
+.article-title {text-align: center;}
+.article-title h2 {font-size: 39px; color: #0093bd; font-family: 'Nanum Pen Script', cursive;}
+.article-title .btn {font-size: 35px;}
+
 /* media query */
 @media (max-width: 1280px) {
   .container {
     width: 100%;
   }
+  /* row를 이용하여 글자 양옆에 공간을 준다. */
+  .row {
+    padding: 0 15px;
+  }
 }
 
 @media (max-width: 1024px) {
+  .nav li {
+    /* 행을 4개로 만든다. */
+    width: 25%;
+  }
 }
 
 @media (max-width: 960px) {
 }
 
 @media (max-width: 768px) {
+  /* width 값을 조절하여 li의 행의 개수를 조절한다.*/
+  .nav li {
+    /* 행을 3개로 만든다. */
+    width: 33.3333%;
+  }
 }
 
 @media (max-width: 600px) {
+  .title,
+  .icon-font,
+  .nav {
+    display: none;
+  }
+  
 }
 
 @media (max-width: 480px) {
