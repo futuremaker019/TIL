@@ -1,19 +1,59 @@
 /* layout */
+body {
+  background: #f1f4fb url(../img/header_bg.png) repeat center top;
+}
+
 #header {
-  height: 327px;
-  background: url(../img/header_bg.png) repeat center top;
+  /* background-color: ; */
+  /* article-title이 올로올수 있도록 height를 지워준다. */
+  /* height: 327px; */
   /* background-repeat: repeat; */
 }
-#nav {
+#nav {}
+#article-title {background-color: #fff; border-bottom:1px solid #dbdbdb;}
+#contents {}
+#contents .container{
+  border-right: 1px solid #dbdbdb;
+  border-left: 1px solid #dbdbdb;
+}
+#nav .container, #contents .container {background-color: #f1f4fb;}
+
+#cont-left{
+  float: left; 
+  width: 250px; 
+}
+#cont-center{
+  overflow: hidden;
+  min-height: 1400px; 
+  margin-right: 250px;
+  border-right: 1px solid #dbdbdb;
+  border-left: 1px solid #dbdbdb;
+}
+#cont-right{
+  width: 250px; 
+  position: absolute; 
+  right: 0;
+  top: 0;
+}
+#footer{
+  width: 100%;
+  height: 200px;
+  border-top: 1px solid #000;
 }
 
 /* container */
 .container {
   width: 1200px;
   margin: 0 auto;
+  position: relative;
   /* 영역 확인용 background*/
   /* background: rgba(0, 0, 0, 0.3); */
 }
+
+/* clearfix */
+.clearfix{  *zoom: 1;}
+.clearfix:before, .clearfix:after {display:block; content:''; line-height:0;}
+.clearfix:after {clear:both;}
 
 /* quick */
 .quick {
@@ -22,7 +62,7 @@
 .quick a {
   display: inline-block;
   color: #ffffff;
-  padding: 5px 0 0 10px;
+  padding: 5px 0 4px 10px;
   transition: all 0.5s ease;
 }
 
@@ -34,23 +74,25 @@
 .title {
   text-align: center;
   text-transform: uppercase;
-  padding-top: 75px;
+  margin-top: 70px;
 }
 .title p {
-  display: inline;
+  display: inline-block;
   font-size: 24px;
   background-color: #51b0dc;
   color: #fff;
-  padding: 10px 20px;
+  padding: 14px 20px 10px 20px;
+  font-weight: 900;
 }
 .title h1 a {
   display: inline-block;
   background-color: #4a9abf;
   color: #fff;
-  padding: 10px 20px;
+  padding: 10px 20px 10px 20px;
   font-size: 14px;
-  transition: all 0.3s ease-in-out;
+  font-weight: 400;
   margin-top: -4px;
+  transition: all 0.3s ease-in-out;
 }
 .title h1 a:hover {
   box-shadow: 0 0 0 3px rgba(75, 154, 191, 0.9) inset,
@@ -127,15 +169,17 @@
   padding: 30px 0;
 }
 .nav h2 {
-  font-size: 16px;
+  font-size: 22px;
   color: #25a2d0;
   padding-bottom: 5px;
+  text-transform: uppercase;
 }
 .nav li {
   position: relative;
   float: left;
   width: 20%;
   padding-left: 8px;
+  /* box-sizing 검색해서 더 공부해보자 */
   box-sizing: border-box;
 }
 .nav li:before {
@@ -151,6 +195,9 @@
 .nav li a {
   padding: 3px;
   border-radius 2px;
+  font-style: 13px;
+  line-height: 19px;
+  color:#333;
   transition: all 0.1s ease
 }
 .nav li a:hover {
@@ -161,17 +208,73 @@
 /* article-title */
 .article-title {text-align: center;}
 .article-title h2 {font-size: 39px; color: #0093bd; font-family: 'Nanum Pen Script', cursive;}
-.article-title .btn {font-size: 35px;}
+.article-title .btn {
+  position: absolute; 
+  right: 0;
+  top: 5px;
+  font-size: 35px;
+}
+.article-title .btn a {
+  width: 60px;
+  height: 60px;
+  background-color: #4a9abf;
+  font-size: 35px;
+  line-height: 60px;
+  border-radius: 50%;
+  display: block;
+  color: #fff;
+}
+
+/* cbox (contents) */
+.cbox {padding: 15px; border-bottom: 1px solid #dbdbdb}
+.cbox .cbox-title {font-size: 20px; color: #2f7fa6;}
+.cbox .cbox-desc {border-bottom: 1px dashed #dbdbdb; 
+  padding: 15px; margin-bottom: 15px; color: #878787}
+.cbox .column1 {}
+.cbox .column2 {}
+.cbox .column3 {}
+.cbox .column4 {}
+.cbox .column5 {}
+.cbox .column6 {}
+.cbox .column7 {}
+.cbox .column8 {}
+.cbox .column9 {}
+
+/* 4번째 자식을 찾아서 css 효과를 준다. (CSS3 형식) */
+/* #cont-left article:nth-child(4) {border-bottom: 0;}
+#cont-center article:nth-child(4) {border-bottom: 0;}
+#cont-right article:nth-child(4) {border-bottom: 0;} */
+
+#cont-left article:last-child, #cont-center article:last-child, #cont-right article:last-child 
+{border-bottom: 0;}
+/* #cont-center article:last-child {border-bottom: 0;}
+#cont-right article:last-child {border-bottom: 0;} */
+
+/* menu */
+.menu {}
+.menu li {position: relative; }
+.menu li a {font-size: 16px; text-transform: uppercase; color: #878787;
+border-bottom : 1px solid #dbdbdb; padding: 10px; display:block;
+transition: all .3s ease;}
+.menu li a:hover {color: #333;}
+.menu li a i {position: absolute; right: 10px; 
+  top: 50%; 
+  transform : translateY(-50%)
+}
+
+
+/* footer */
+.footer{}
 
 /* media query */
 @media (max-width: 1280px) {
-  .container {
-    width: 100%;
-  }
+  .container {width: 100%;}
   /* row를 이용하여 글자 양옆에 공간을 준다. */
-  .row {
-    padding: 0 15px;
-  }
+  .row {padding: 0 15px;}
+  .article-title .btn {margin-right: 15px;}
+  /* 크기를 줄이면 border에 준 1px(총 2px)때문에 아래에 스크롤바가 생긴다. */
+  /* border 에 0을 주어 없애준다. */
+  #contents .container {border: 0;}
 }
 
 @media (max-width: 1024px) {
@@ -179,9 +282,12 @@
     /* 행을 4개로 만든다. */
     width: 25%;
   }
+  
 }
 
 @media (max-width: 960px) {
+  #cont-center {margin-right: 0; border-right: 0;}
+  #cont-right {position:static; width: 100%; border-top: 1px solid #dbdbdb}  
 }
 
 @media (max-width: 768px) {
@@ -193,13 +299,21 @@
 }
 
 @media (max-width: 600px) {
-  .title,
-  .icon-font,
-  .nav {
-    display: none;
-  }
-  
+  .title, .icon-font, .nav, .article-title .btn {display: none;}
+  #cont-left {float:none; width: 100%;}
+  #cont-center {border-left: 0; border-top: 1px solid #dbdbdb;}
+  .cbox.column1 {padding: 0;}
+  .cbox.column1 .cbox-title {display : none;}
+  .cbox.column1 .cbox-desc {display : none;}
+  .cbox.column1 .menu li a i {display : none;}
+  .cbox.column1 .menu ul {overflow: hidden;}
+  .cbox.column1 .menu li {float: left; width: 33.3333%; border-right: 1px solid #dbdbdb;
+    /* border값이 width값 안에 포함이 된다. */
+  box-sizing: border-box; text-align: center; }
+  /* 3n -> 3의 배수를 의미한다. */
+  .cbox.column1 .menu li:bth-child(3n) {border-right:0;}
+  .cbox.column1 .menu li a {text-shadow: 0 0 5px rgba(0,0,0,0.5); color:#fff}
 }
-
 @media (max-width: 480px) {
+
 }
