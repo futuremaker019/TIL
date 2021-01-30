@@ -26,6 +26,10 @@ editor에서 project explorer로, project explorer에서 editor로
 
 - ctrl + ,
 
+editor 창의 미니맵 끄기
+
+- settings 들어가서 `minimap` 검색 후, Enable 끄기
+
 주석 색 변경
 
 - settings 클릭
