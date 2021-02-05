@@ -1,10 +1,10 @@
 /* layout */
 body {
-  background: #f1f4fb url(../img/header_bg.png) repeat center top;
+  
 }
 
 #header {
-  /* background-color: ; */
+  background: #f1f4fb url(../img/header_bg.png) repeat center top;
   /* article-title이 올로올수 있도록 height를 지워준다. */
   /* height: 327px; */
   /* background-repeat: repeat; */
@@ -16,7 +16,7 @@ body {
   border-right: 1px solid #dbdbdb;
   border-left: 1px solid #dbdbdb;
 }
-#nav .container, #contents .container {background-color: #f1f4fb;}
+#nav .container, #contents .container, #footer .container {background-color: #f1f4fb;}
 
 #cont-left{
   float: left; 
@@ -262,6 +262,81 @@ transition: all .3s ease;}
   transform : translateY(-50%)
 }
 
+/* Notice */
+.notice {position : relative;}
+.notice h5 {font-size: 14px; color: #2f7fa6;}
+/* overflow hidden 한줄 효과 */
+.notice li {position: relative; overflow: hidden; text-overflow:ellipsis; white-space: nowrap;
+padding-left: 8px;}
+.notice li:before {content: ''; width: 3px; height: 3px; background-color: #449ce2;
+position: absolute; left: 0; top: 8px; border-radius: 50%;}
+.notice .more {position : absolute; top: 0; right: 0; text-transform: uppercase;}
+
+/* blog */
+.blog { }
+.blog h5 {font-size: 14px; color: #2f7fa6; padding-bottom: 3px;}
+.blog .blog-img {
+  position: relative;
+  display: block; 
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 3px;
+  background-color: #000;
+}
+.blog .blog-img:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  background: rgba(0,0,0,0);
+  width: 100%;
+  height: 100%;
+  z-index: 50;
+  transition: background 0.3s ease-in-out;
+}
+.blog .blog-img:hover:after {background: rgba(0,0,0,0.4);}
+.blog .blog-img img {display: block;}
+.blog .blog-img em {
+  opacity: 0;
+  position: absolute; 
+  left: 0; 
+  top: 50%; 
+  width: 100%;
+  text-align: center;
+  margin-top: -10px;
+  z-index: 100;
+  transition: opacity 0.3s ease-in-out;
+}
+.blog .blog-img:hover em {opacity: 1;}
+
+/* blog2 */
+.blog2 h5 {font-size: 14px; color: #2f7fa6; padding-bottom: 3px;}
+/* img와 a태그는 inline구조, block화 시켜주자. */
+.blog2 .blog-img {
+  position: relative; display: block; color: #ffffff;
+  font-size: 16px;
+  overflow: hidden;
+}
+.blog2 .blog-img:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 90;
+}
+.blog2 .blog-img img {
+  display: block; 
+  transform: scale(1.5, 1.5)
+}
+.blog2 .blog-img em {position: absolute; left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
 
 /* footer */
 .footer{}
@@ -302,7 +377,10 @@ transition: all .3s ease;}
   .title, .icon-font, .nav, .article-title .btn {display: none;}
   #cont-left {float:none; width: 100%;}
   #cont-center {border-left: 0; border-top: 1px solid #dbdbdb;}
-  .cbox.column1 {padding: 0;}
+  .cbox.column1 {
+    padding: 0; 
+    background: #f1f4fb url(../img/header_bg.png) repeat center top;    
+  }
   .cbox.column1 .cbox-title {display : none;}
   .cbox.column1 .cbox-desc {display : none;}
   .cbox.column1 .menu li a i {display : none;}

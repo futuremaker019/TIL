@@ -20,7 +20,9 @@ textarea,
 select,
 fieldset,
 p,
-button {
+button,
+figure,
+figcaption {
   margin: 0;
   padding: 0;
 }
@@ -41,7 +43,7 @@ textarea,
 select,
 button,
 table {
-  font-family: "나눔 고딕", "Nanum Gothic", "돋움", Dotum, sans-serif;
+  font-family: '나눔 고딕', 'Nanum Gothic', '돋움', Dotum, sans-serif;
   font-size: 12px;
   line-height: 1.7;
 }
@@ -86,6 +88,33 @@ address {
 img,
 fieldset {
   border: 0;
+}
+
+/* 시맨틱 태그 블록화 */
+section,
+article,
+aside,
+figure,
+figcaption,
+footer,
+header,
+menu,
+nav,
+details {
+  display: block;
+}
+
+/* 반응형 이미지 */
+img {
+  width: 100%;
+}
+
+/* 가로모드 글씨 크기 초기화 (아이폰일 경우) */
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: none;
+  /* 마이크로 소프트의 글자 사이즈 default */
+  -ms-text-size-adjust: none;
 }
 
 /* padding, margin setting */
