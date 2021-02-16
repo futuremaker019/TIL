@@ -232,13 +232,13 @@ rm .gitconfig
 
 ---
 
-- Remote를 만드는 문법, push를 하기 위한 준비 단계
+Remote를 만드는 문법, push를 하기 위한 준비 단계
 
 ```vim
 git remote add origin (repository URL)
 ```
 
-- Remote repository에 posh
+Remote repository에 posh
 
 ```vim
 git push -u origin master
@@ -249,10 +249,28 @@ git push -u origin master
 - master : name of branch
 ```
 
-- 강제 push
+강제 push
 
 ```vim
 git push -f origin master
+```
+
+remote 확인
+
+```vim
+git remote -v
+```
+
+config list 확인
+
+```vim
+git config --list
+```
+
+remote 변경
+
+```vim
+git remote set-url origin https://{git username}@github.com/{git username}/{repository name}.git
 ```
 
 <br><br>

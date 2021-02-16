@@ -1,10 +1,20 @@
-### 이클립스
+## 이클립스
 
-- `.project` 파일로 들어가 프로젝트의 이름 변경 (같은 이클립스에서 실행시 변경해주어야 한다.)
-- 업로드 파일 디렉토리 위치 변경
-  - `globals.properties`의 업로드 파일 디렉토리 위치 설정
-  - 업로드 파일 디렉토리는 되도록이면 하나의 디렉토리에 모아준다.
-    - 커스터마이징, 공통으로 분리한다.
+폰트 : `verdana`
+
+java class path 설정
+
+- `lib` 파일의 라이브러리를 등록해준다. `add jar`
+- `Apache Tomcat v9.0` 추가
+  - [Add Library] -> [Server Runtime] -> [Apach Tomcat] 클릭하여 추가
+
+`.project` 파일로 들어가 프로젝트의 이름 변경 (같은 이클립스에서 실행시 변경해주어야 한다.)
+
+업로드 파일 디렉토리 위치 변경
+
+- `globals.properties`의 업로드 파일 디렉토리 위치 설정
+- 업로드 파일 디렉토리는 되도록이면 하나의 디렉토리에 모아준다.
+  - 커스터마이징, 공통으로 분리한다.
 
 ```java
 // 예시
@@ -30,6 +40,15 @@ Globals.SkeyPath =D:\\dev\\simms\\workspace_simms25\\SIMMS25\\src\\main\\webapp\
   // Host 태그 아래에 추가해준다.
   <Context docBase="D:\dev\simms\simms25_upload\COMP\upload" path="/upload" reloadable="true"/>
   <Valve className="org.apache.catalina.valves.ErrorReportValve" showReport="false" showServerInfo="false"/>
+```
+
+### IMPORT
+
+`.classpath`, `.project` 생성
+
+```
+touch .classpath
+touch .project
 ```
 
 <br>
