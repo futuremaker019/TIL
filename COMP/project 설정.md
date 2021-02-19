@@ -42,11 +42,17 @@ Globals.SkeyPath =D:\\dev\\simms\\workspace_simms25\\SIMMS25\\src\\main\\webapp\
   <Valve className="org.apache.catalina.valves.ErrorReportValve" showReport="false" showServerInfo="false"/>
 ```
 
+console, search, debug, variables, expression, history
+
+<br>
+
 ### IMPORT
 
 `.classpath`, `.project` 생성
 
 ```
+// git bash
+
 touch .classpath
 touch .project
 ```

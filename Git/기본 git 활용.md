@@ -238,7 +238,7 @@ Remote를 만드는 문법, push를 하기 위한 준비 단계
 git remote add origin (repository URL)
 ```
 
-Remote repository에 posh
+Remote repository에 push
 
 ```vim
 git push -u origin master
@@ -269,8 +269,10 @@ git config --list
 
 remote 변경
 
-```vim
+```
 git remote set-url origin https://{git username}@github.com/{git username}/{repository name}.git
+
+ex) git remote set-url origin https://futuremaker019@github.com/futuremaker019/TIL.git
 ```
 
 <br><br>
