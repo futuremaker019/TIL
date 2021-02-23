@@ -29,3 +29,11 @@ IFNULL(fur_rep, makeup_rep)
 -- common_rep가 NULL이면 IFNULL(fur_rep, makeup_rep)을 반환
 IFNULL(common_rep, IFNULL(fur_rep, makeup_rep))
 ```
+
+### CONCAT()
+
+### REPLACE()
+
+```sql
+SELECT REPLACE(컬럼명, '변경전 문자', '변경후 문자')
+```
