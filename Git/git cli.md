@@ -311,6 +311,8 @@ remote 변경
 git remote set-url origin https://{git username}@github.com/{git username}/{repository name}.git
 
 ex) git remote set-url origin https://futuremaker019@github.com/futuremaker019/TIL.git
+
+로그인 화면이 나오면 해당 Repository의 계정으로 로그인을 해서 push한다.
 ```
 
 <br><br>
