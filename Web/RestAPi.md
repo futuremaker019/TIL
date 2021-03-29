@@ -38,8 +38,10 @@
 
 ### REST API 디자인 가이드
 
-- URI는 정보의 자원을 표현해야 한다. (리소스명은 동사보다는 명사를 사용)
-  - 일반적으로 URI는 자원을 표현하는데 중점을 두어야 한다. delete과 같은 행위에 대한 표현이 들어가서는 안된다.
+<br>
+
+URI는 정보의 자원을 표현해야 한다. (리소스명은 동사보다는 명사를 사용) <br>
+일반적으로 URI는 자원을 표현하는데 중점을 두어야 한다. delete과 같은 행위에 대한 표현이 들어가서는 안된다.
 
 ```
 GET /members/delete/1
@@ -48,7 +50,7 @@ GET /members/delete/1
 GET /members/1
 ```
 
-- 자원에 대한 행위는 HTTP Method(GET, POST, PUT, DELETE등) 로 표현한다.
+자원에 대한 행위는 HTTP Method(GET, POST, PUT, DELETE등) 로 표현한다.
 
 ### URI 설계 시 주의할 점
 
@@ -69,7 +71,63 @@ http://restapi.example.com/animals/mammals/whales
 http://restapi.example.com/members/soccer/1/photo.jpg (x)
 ```
 
-    - REST API에서는 메시지 바디 내용의 포맷을 나타내기 위한 파일 확장자를 URI 안에 포함시키지 않는다. Accept header를 사용하도록 한다.
+7. 세션 ID를 포함하지 않는다.
+8. 프로그래밍 언어의 Method명을 이용하지 않는다.
+9. 명사에 단수형 보다는 복수형을 사용해야 한다. 컬렉션에 대한 표현은 복수로 사용
+10. 컨트롤러 이름으로는 동사나 동사구를 사용한다.
+
+```
+https://fastcampus.co.kr/classes/java/curriculums/web-master
+```
+
+11. 컨트롤러 이름으로는 동사나 동사구를 사용한다.
+
+```
+https://fastcampus.co.kr/classes/java/curriculums/web-master/re-order
+```
+
+12. 경로 부분 중 변하는 부분은 유일한 값으로 대체한다.
+
+```
+... /curriculums/web-master/lessons/{lesson-id}/users/{user-id}
+... /curriculums/web-master/lessons/2/users/100
+```
+
+13. CRUD 기능을 나타내는 것은 URI에 사용하지 않는다.
+
+```
+GET : 생략 ... /curriculums/web-master/lessons/2/users/100/READ (X)
+DELETE : 생략 ... /curriculums/web-master/lessons/2/users/100   (O)
+```
+
+14. URI Query Parameter 디자인
+    URI 쿼리 부분으로 컬렉션 결과에 대해서 필터링 할 수 있다.
+
+```
+생략 ... /curriculums/web-master?chaper=2
+```
+
+15. URI Query는 컬렉션의 결과를 페이지로 구분하여 나타내는데 사용한다.
+
+```
+생략 ... /curriculums/web-master?chaper=2&page=0&size=10&sort=asc
+```
+
+16. API에 있어서 서브 도메인은 일관성 있게 사용해야 한다.
+
+```
+https://fastcampus.co.kr
+https://api.fastcampus.co.kr
+https://api-fastcampus.co.kr
+```
+
+17. 클라이언트 개발자 포탈 서브 도메인은 일관성 있게 만든다.
+
+```
+https://dev-fastcampus.co.kr
+```
+
+REST API에서는 메시지 바디 내용의 포맷을 나타내기 위한 파일 확장자를 URI 안에 포함시키지 않는다. Accept header를 사용하도록 한다.
 
 ```
 GET /members/soccer/1/photo HTTP/1.1 Host: restapi.example.com Accept: image/jpg
