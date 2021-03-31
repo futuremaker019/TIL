@@ -74,3 +74,15 @@ inline 메서드
 <br>
 
 ### SpringBoot 실행 시 에러
+
+`SpringBoot` `run` 시, `Cammand line is too long` 에러
+
+경로 : 해당 프로젝트의 `.idea` > `workspace.xml`
+
+```xml
+<component name="PropertiesComponent">
+  ...
+  ...
+  <property name="dynamic.classpath" value="true" />
+</component>
+```
