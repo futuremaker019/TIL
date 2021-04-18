@@ -13,7 +13,7 @@ git branch branch명 [<from branch>]
 ex) git branch ex1 [master] (어느 브랜치를 기준으로 브랜치가 생성이 되었는지 나타낸다. 생략가능)
 ```
 
-- 브랜치 생성 및 checkout 동시에 실행
+브랜치 생성 및 checkout 동시에 실행
 
 ```vim
 git checkout -b 생성할 branch명
@@ -52,10 +52,10 @@ git branch -
 git checkout [branch명]
 ```
 
-브랜치를 만들면서 동시에 이동
-
+특정 브랜치의 파일을 원하는 브랜치로 merge 시킨다.
 ```
-git checkout -b [branch명]
+git checkout -p {merge할 브랜치명} {merge할 파일}
+ex) git checkout -p master Hello.java
 ```
 
 <br>
@@ -66,9 +66,23 @@ git checkout -b [branch명]
   - conflicts를 해결하고 commit을 하여 통합을 완료한다.
 
 ```vim
- - git checkout master
- - git merge branch명
+git checkout master
+git merge branch명
+
+git merge --ff branch명
+git merge --no-ff branch명
+
 ```
+option)
+|명령어|설명|
+|--|--|
+|--ff <br>(기본 설정)|병합 대상 브랜치가 fast-forward 관계인 경우, 병합커밋이 만들지 않고 브랜치 태깅만 변경됨|
+|--no-ff|fast-forward 관계인 경우에도 반드시 병합커밋을 만든다.|
+ 
+[참고 사이트](https://koreabigname.tistory.com/65)
+
+
+
 
 <br>
 
