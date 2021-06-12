@@ -9,10 +9,11 @@
 - 브랜치 생성
 
 ```vim
-git branch branch명
+git branch branch명 [<from branch>]
+ex) git branch ex1 [master] (어느 브랜치를 기준으로 브랜치가 생성이 되었는지 나타낸다. 생략가능)
 ```
 
-- 브랜치 생성 및 checkout 동시에 실행
+브랜치 생성 및 checkout 동시에 실행
 
 ```vim
 git checkout -b 생성할 branch명
@@ -20,30 +21,41 @@ git checkout -b 생성할 branch명
 
 <br>
 
-- 브랜치 확인
+브랜치 확인
 
 ```vim
 git branch
 ```
 
-- 명령어 사용하며 원격 저장소의 모든 branch의 명령어를 보여준다.
+명령어 사용하며 원격 저장소의 모든 branch의 명령어를 보여준다.
 
 ```vim
 git branch -r
 ```
 
-- 로컬, 원격 모든 저장소의 branch의 리스트를 보여준다.
+로컬, 원격 모든 저장소의 branch의 리스트를 보여준다.
 
 ```vim
 git branch -a
 ```
 
+이전 브랜치로 이동
+```
+git branch -
+``` 
+
 <br>
 
-- 브랜치로 이동
+브랜치로 이동
 
 ```vim
-git checkout branch명
+git checkout [branch명]
+```
+
+특정 브랜치의 파일을 원하는 브랜치로 merge 시킨다.
+```
+git checkout -p {merge할 브랜치명} {merge할 파일}
+ex) git checkout -p master Hello.java
 ```
 
 <br>
@@ -54,9 +66,23 @@ git checkout branch명
   - conflicts를 해결하고 commit을 하여 통합을 완료한다.
 
 ```vim
- - git checkout master
- - git merge branch명
+git checkout master
+git merge branch명
+
+git merge --ff branch명
+git merge --no-ff branch명
+
 ```
+option)
+|명령어|설명|
+|--|--|
+|--ff <br>(기본 설정)|병합 대상 브랜치가 fast-forward 관계인 경우, 병합커밋이 만들지 않고 브랜치 태깅만 변경됨|
+|--no-ff|fast-forward 관계인 경우에도 반드시 병합커밋을 만든다.|
+ 
+[참고 사이트](https://koreabigname.tistory.com/65)
+
+
+
 
 <br>
 
@@ -104,7 +130,12 @@ git log --branches -- graph -- decorate -- oneline
 
 <br>
 
-### ADD
+### Add
+
+Untacked 파일, 디렉토리를 stage에 올림
+```
+git add .
+```
 
 Unstage 상태로 변경 (파일을 선택하여 Unstage 상태로 변경한다.)
 
@@ -184,7 +215,7 @@ git reset HEAD~2
 commit을 취소하고 해당 파일들은 unstaged 상태로 워킹 디렉터리에서 삭제
 
 ```
-git --hard HEAD^
+git reset --hard HEAD^
 ```
 
 <br><br>
@@ -248,9 +279,19 @@ git reset --hard origin/master
 
 - 이름과 이메일 입력
 
-```vim
-git config --global user.name [이름 입력]
-git config --global user.email [이메일 주소입력]
+```
+<!-- global config 변경 -->
+git config --global user.name "이름 입력"
+git config --global user.email "이메일 주소입력"
+
+<!-- local config 변경 -->
+git config --local user.name "이름 입력"
+git config --local user.email "이메일 주소입력"
+```
+
+config 확인
+```
+git config --list
 ```
 
 기타 리눅스 명령어로 config 확인
@@ -280,6 +321,7 @@ Remote repository에 push
 git push -u origin master
 
 -u : Remote Repositiry에 최초 master branch를 push할 때 붙여준다.
+     upsteam을 의미한다.
 
 - origin : name of remote
 - master : name of branch
@@ -295,12 +337,6 @@ remote 확인
 
 ```vim
 git remote -v
-```
-
-config list 확인
-
-```vim
-git config --list
 ```
 
 remote 변경
