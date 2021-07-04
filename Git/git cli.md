@@ -40,9 +40,10 @@ git branch -a
 ```
 
 이전 브랜치로 이동
+
 ```
 git branch -
-``` 
+```
 
 <br>
 
@@ -53,6 +54,7 @@ git checkout [branch명]
 ```
 
 특정 브랜치의 파일을 원하는 브랜치로 merge 시킨다.
+
 ```
 git checkout -p {merge할 브랜치명} {merge할 파일}
 ex) git checkout -p master Hello.java
@@ -73,16 +75,14 @@ git merge --ff branch명
 git merge --no-ff branch명
 
 ```
+
 option)
 |명령어|설명|
 |--|--|
 |--ff <br>(기본 설정)|병합 대상 브랜치가 fast-forward 관계인 경우, 병합커밋이 만들지 않고 브랜치 태깅만 변경됨|
 |--no-ff|fast-forward 관계인 경우에도 반드시 병합커밋을 만든다.|
- 
+
 [참고 사이트](https://koreabigname.tistory.com/65)
-
-
-
 
 <br>
 
@@ -133,6 +133,7 @@ git log --branches -- graph -- decorate -- oneline
 ### Add
 
 Untacked 파일, 디렉토리를 stage에 올림
+
 ```
 git add .
 ```
@@ -145,7 +146,7 @@ git reset HEAD 파일명
 
 <br>
 
-### 클론
+### Clone
 
 ---
 
@@ -290,6 +291,7 @@ git config --local user.email "이메일 주소입력"
 ```
 
 config 확인
+
 ```
 git config --list
 ```
