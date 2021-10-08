@@ -132,13 +132,15 @@ git log --branches -- graph -- decorate -- oneline
 
 ### Add
 
-Untacked 파일, 디렉토리를 stage에 올림
+---
+
+- Untacked 파일, 디렉토리를 stage에 올림
 
 ```
 git add .
 ```
 
-Unstage 상태로 변경 (파일을 선택하여 Unstage 상태로 변경한다.)
+- Unstage 상태로 변경 (파일을 선택하여 Unstage 상태로 변경한다.)
 
 ```
 git reset HEAD 파일명
@@ -164,7 +166,7 @@ git clone -b {branch_name} --single-branch {저장소 URL}
 
 <br><br>
 
-### commit
+### Commit
 
 ---
 
@@ -185,6 +187,8 @@ git add 와 commit을 동시에 한다.
 ```vim
 git commit -a -m "커밋 메시지"
 ```
+
+<br>
 
 커밋 로그 변경
 
@@ -253,22 +257,25 @@ git rm -r {파일명}
 
 <br><br>
 
-### reset
+### Reset
 
-- HEAD를 포함한 이후의 모든 commit이 삭제된다.
-  - hard를 사용 시, wording directory까지 영향을 받는다.
+---
+
+HEAD를 포함한 이후의 모든 commit이 삭제된다.
+
+- hard를 사용 시, wording directory까지 영향을 받는다.
 
 ```vim
 git reset --hard HEAD~
 ```
 
-- commit 버전을 포함하지 않은 이후의 모든 commit이 삭제 된다.
+commit 버전을 포함하지 않은 이후의 모든 commit이 삭제 된다.
 
 ```vim
 git reset --hard [commit 버전]
 ```
 
-- 원격 저장소에 push한 commit 이후의 commit은 모두 삭제된다.
+원격 저장소에 push한 commit 이후의 commit은 모두 삭제된다.
 
 ```vim
 git reset --hard origin/master
@@ -276,23 +283,25 @@ git reset --hard origin/master
 
 <br><br>
 
-### config
+### Config
 
-- 이름과 이메일 입력
+---
 
-```
-<!-- global config 변경 -->
+이름과 이메일 입력
+
+```vim
+// global config 변경
 git config --global user.name "이름 입력"
 git config --global user.email "이메일 주소입력"
 
-<!-- local config 변경 -->
+// local config 변경
 git config --local user.name "이름 입력"
 git config --local user.email "이메일 주소입력"
 ```
 
 config 확인
 
-```
+```vim
 git config --list
 ```
 
@@ -301,6 +310,7 @@ git config --list
 ```vim
 //config에 저장된 이름과 이메일 주소 정보를 확인한다.
 cat .gitconfig
+
 // 자장된 이름과 이메일 주소를 지운다.
 rm .gitconfig
 ```
@@ -335,6 +345,12 @@ git push -u origin master
 git push -f origin master
 ```
 
+모든 branch들을 포함하여 push
+
+```
+git push --all
+```
+
 remote 확인
 
 ```vim
@@ -351,6 +367,14 @@ git remote set-url origin https://{git username}@github.com/{git username}/{repo
 ex) git remote set-url origin https://futuremaker019@github.com/futuremaker019/TIL.git
 
 로그인 화면이 나오면 해당 Repository의 계정으로 로그인을 해서 push한다.
+```
+
+pull 명령 실행시 이미 존재하는 두 프로젝트의 기록(history)을 저장하는 상황에 사용하는 명령어
+
+- git에서 서로 관련 기록이 없는 이질적인 두 프로젝트를 병합할 때 사용한다.
+
+```vim
+git pull origin 브런치명 --allow-unrelated-histories
 ```
 
 <br><br>
