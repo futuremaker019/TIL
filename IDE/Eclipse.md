@@ -37,3 +37,11 @@ project explorer로 이동
 프로젝트 실행 시
 
 - [project clean] -> [maven update]
+
+<br>
+
+console의 로그 infitity로 변경
+
+Window -> Preferences -> Run/Debug -> Console
+
+limit console output의 체크박스 제거
