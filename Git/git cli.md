@@ -192,10 +192,10 @@ git commit -a -m "커밋 메시지"
 
 커밋 로그 변경
 
-- 마지막 커밋한 로그를 변경
+- 로컬에서 마지막으로 커밋한 로그를 변경
 
 ```vim
-git commit --amend "변경을 원하는 로그 작성"
+git commit --amend -m "변경을 원하는 로그 작성"
 ```
 
 commit을 취소하고 해당 파일들은 staged 상태로 워킹 디렉터리에 보존
