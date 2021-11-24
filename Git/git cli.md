@@ -377,6 +377,12 @@ pull 명령 실행시 이미 존재하는 두 프로젝트의 기록(history)을
 git pull origin 브런치명 --allow-unrelated-histories
 ```
 
+branch push
+
+```vim
+git push --set-upstream origin [branch 명]
+```
+
 <br><br>
 
 ### Upsteam
