@@ -2,12 +2,16 @@
 
 <br>
 
-|                          |           |
-| ------------------------ | --------- |
-| 단일 editor 페이지 close | ctrl + w  |
-| project explorer         | ctrl + F7 |
-| editor 페이지 이동       | ctrl + F6 |
-| 새로 만들기              | ctrl + n  |
+| title                    | short cut       |
+| ------------------------ | --------------- |
+| 단일 editor 페이지 close | ctrl + w        |
+| project explorer         | ctrl + F7       |
+| editor 페이지 이동       | ctrl + F6       |
+| class 새로 만들기        | ctrl + n        |
+| folder 생성              | alt + shift + n |
+| ---                      | ---             |
+| 탭 오른쪽 이동           | ctrl + pageDown |
+| 탭 왼쪽 이동             | ctrl + pageUp   |
 
 <br>
 <br>
