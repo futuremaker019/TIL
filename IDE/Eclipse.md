@@ -58,3 +58,11 @@ limit console output의 체크박스 제거
 | F6  | 디버깅시 선택된 행의 아래로 이동        |
 | F7  | 디버깅시 실행중인 메소드 외부로 이동    |
 | F8  | 디버깅시 다음 디버그 포인트로 이동      |
+
+<br>
+
+### 주석 색상 변경
+
+preference - `syntax coloring` 검색
+
+원하는 컨텐츠 (java, xml, html 등)의 comment color를 변경한다.
