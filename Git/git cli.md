@@ -385,6 +385,18 @@ git push --set-upstream origin [branch 명]
 
 <br><br>
 
+### 에러 모음
+
+File too long 해결한 명령어
+
+```
+git config --global core.longpaths true
+
+or
+
+git config --system core.longpaths true
+```
+
 ### Upsteam
 
 ---
