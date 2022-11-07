@@ -240,7 +240,6 @@ touch .gitignore
 - ignore 해야할 목록을 추가한다. ([gitignore 생성 사이트](https://www.toptal.com/developers/gitignore))
 
   - 스프링 부트에서는 프로젝트 생성 시, 자동적으로 gitignore가 생성됨
-  -
 
 - gitignore가 적용되지 않는다면 아래의 명령어를 사용하여 cache를 삭제해준다.
 
@@ -253,6 +252,21 @@ git rm --cached -r .
 
 ```vim
 git rm -r {파일명}
+```
+
+- 특정 파일이나 폴더를 추가시키고 싶을때 사용하는 명령어
+  - 방법1 : 형상관리에 포함하고 싶은 파일의 부모 디렉토리를 모두 `!`로 제외시켜준다.
+  - 방법2 : `git add -f`를 이용하여 stage에 강제로 올린다.
+
+```vim
+# 파일 하나만 추가
+!node_modules/axios/lib/core/createError.js
+
+# 디렉토리 추가
+!src/main/webapp/WEN-INF/lib/
+
+# 아래의 형태로 추가함
+!src/main/webapp/WEN-INF/lib/*.jar
 ```
 
 <br><br>
