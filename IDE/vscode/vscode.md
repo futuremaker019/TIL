@@ -46,14 +46,16 @@ editor 창의 미니맵 끄기
 
 익스텐션
 
+- prettier
 - auto rename tag
 - bracket pair colorizer
 - css peek
 - eslint
 - html css support
 - indent-rainbow
-- jquery code snippets
+- path intellisense
 - live server
+- markdown all inone
 - material icon theme
 - material theme
 
@@ -73,11 +75,13 @@ editor 창의 미니맵 끄기
 - thymeleaf
 
 Emmet 활용
-- 
+
+-
 
 ### git bash로 Terminal 변경하기
 
 Termial > integrated > window의 Settings에 아래 추가
+
 ```json
 "terminal.integrated.shell.windows" : "C:\\Program Files\\Git\\bin\\bash.exe"
 ```
