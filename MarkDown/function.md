@@ -20,3 +20,14 @@ _single underscores_
 - **double asterisks**
 - **double underscores**
 - ~~cancelline~~
+
+```
+// code
+Link: [Google][googlelink]
+
+[googlelink]: https://google.com "Go google"
+```
+
+Link: [Google][googlelink]
+
+[googlelink]: https://google.com 'Go google'
