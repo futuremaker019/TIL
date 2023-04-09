@@ -74,3 +74,45 @@ public class SupplierExample {
 ```
 
 #### 1-3. Function 함수적 인터페이스
+
+매개값과 리턴값이 있는 applyXXX() 메서드를 가지고 있다. 이 메서드들은 매개값을 리턴값으로 매핑(타입 변환)하는 역할을 한다.
+
+| 인터페이스명         | 추상 메서드           | 설명                      |
+| -------------------- | --------------------- | ------------------------- |
+| Functionn<T, R>      | R apply(T t)          | 객체 T를 객체 R로 매핑    |
+| BiFunctionn<T, U, R> | R apply(T t, U u)     | 객체 T, U를 객체 R로 매핑 |
+| DoubleFunction<R>    | R apply(double value) | double을 객체 R로 매핑    |
+| 등등                 |                       |                           |
+
+```java
+// 람다식 작성
+Function<Student, String> function = t -> { return t.getName(); }
+Function<Student, String> function = t -> t.getName();
+```
+
+```java
+public class FunctionExample {
+  private static List<Student> list = List.of{
+    new Student("홍길동", 20, 12);
+    new Student("김길동", 30, 40);
+  }
+
+  public static void printString(Function<Student, String> function) {
+    for(Student student : list) {
+      System.out.println(function.apply(student) + " ");        // 람다식 구현
+    }
+  }
+
+  public static void printInt(ToIntFunction<Student> function) {
+    for(Student student : list) {
+      System.out.println(function.applyAsInt(student) + " ");   // 람다식 구현
+    }
+  }
+
+  public static void main(String... args) {
+    System.out.println("학생 이름")
+    printString(t -> t.getName());        // 람다식 실행
+    printInt(t -> t.getEnglishScore());
+  }
+}
+```
