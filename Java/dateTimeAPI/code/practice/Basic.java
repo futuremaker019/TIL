@@ -1,6 +1,7 @@
 import java.time.*;
 import java.time.chrono.ChronoLocalDateTime;
 import java.time.temporal.ChronoField;
+import java.time.temporal.ChronoUnit;
 
 public class Basic {
     public static void main(String[] args) {
@@ -58,8 +59,8 @@ public class Basic {
 
         Instant now = Instant.now();
         System.out.println("now = " + now);     // 2023-08-19T16:44:09.023312800Z
-        int day1 = Instant.now().get(ChronoField.DAY_OF_MONTH);  // 에러발생! 사람이 읽을수 있는 시간을 정보를 제공하지 않는다.
-        System.out.println("day1 = " + day1);
+//        int day1 = Instant.now().get(ChronoField.DAY_OF_MONTH);  // 에러발생! 사람이 읽을수 있는 시간을 정보를 제공하지 않는다.
+//        System.out.println("day1 = " + day1);
 
         /**
          * Duration, Period
@@ -74,5 +75,17 @@ public class Basic {
          * Period 클레스는 팩토리 메서드 between을 이용하여 두 LocalDate 의 차이를 확인할 수있다.
           */
         Period.between(LocalDate.of(2017, 9, 11), LocalDate.of(2017, 9, 20));
+
+        Duration duration = Duration.ofMinutes(3);
+        System.out.println("duration = " + duration);
+        Duration duration1 = Duration.of(3, ChronoUnit.MINUTES);
+        System.out.println("duration1 = " + duration1);
+
+        Period period = Period.ofDays(10);
+        System.out.println("period = " + period);
+        Period period1 = Period.ofWeeks(3);
+        System.out.println("period1 = " + period1);
+        Period period2 = Period.of(2, 6, 1);
+        System.out.println("period2 = " + period2);
     }
 }
