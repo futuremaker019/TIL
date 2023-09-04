@@ -9,21 +9,20 @@ public class DepthFirstSearch {
      * N개의 정점과 M개의 간선으로 구성된 무방향 그래프가 주어진다. 정점 번호는 1번부터 N번이고 모든 간선의 가중치는 1이다.
      * 정점 R에서 시작하여 깊이 우선 탐색으로 노드를 방문할 경우 노드의 방문 순서를 출력하라. 인접 정점온 오름차순으로 방문한다.
      */
-
     final static int MAX = 1000000 + 10;    // 정점은 5<= N <= 1,000,000 이다
-    static ArrayList<Integer>[] graph;  // ArrayList<Integer> 로 구성된 배열
-    static boolean[] visited;           // 특정 노드의 인덱스에 방문했다는 확인을 위한 boolean 배열
-    static int N;                       // 정점(노드)의 수
-    static int M;                       // 간선의 수
-    static int R;                       // 시작 노드 번호
-    static int[] answer;                //
+    static ArrayList<Integer>[] graph;      // ArrayList<Integer> 로 구성된 배열
+    static boolean[] visited;               // 특정 노드의 인덱스에 방문했다는 확인을 위한 boolean 배열
+    static int N;                           // 정점(노드)의 수
+    static int M;                           // 간선의 수
+    static int R;                           // 시작 노드 번호
+    static int[] answer;                    //
     static int order;
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-        StringTokenizer st = new StringTokenizer(br.readLine());
+        StringTokenizer st;
         N = Integer.parseInt(br.readLine());
         M = Integer.parseInt(br.readLine());
         R = Integer.parseInt(br.readLine());
