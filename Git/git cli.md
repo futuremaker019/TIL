@@ -329,6 +329,71 @@ cat .gitconfig
 rm .gitconfig
 ```
 
+alias 생성
+
+```python
+# log alias 생성
+git config --global alias.lg 'log --graph --oneline --all'
+```
+
+<br><br>
+
+### stash
+
+변경내용 임시저장
+
+```python
+git stash
+```
+
+원하는 이름으로 stash 저장
+
+```python
+git stash save [stash명]
+```
+
+stash 목록 보기
+
+```python
+git stash list
+```
+
+가장 최근 stash 가져오기
+
+```python
+git stash apply
+```
+
+특정 stash 가져오기
+
+```python
+git stash apply stash@{1}
+```
+
+가장 최근 stash를 적용하고 동시에 stack에서 지우기
+
+```python
+git stash pop
+```
+
+특정 stash를 적용하고 동시에 stack에서 지우기
+
+```python
+git stash pop stash@{1}
+```
+
+가장 최근 stash 지우기
+
+```python
+git stash drop
+```
+
+특정 stash 지우기
+
+```python
+git stash drop stash@{1}
+```
+
 <br><br>
 
 ### GitHub and Remote Repository
