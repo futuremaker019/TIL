@@ -48,7 +48,7 @@ public class Cabbage {
 
         // 테스트케이스란다. 그리고 각각의 다른 케이스(배추가 다르게 심어져있는 상태)를 테스트하기 위함이란다.
         // 한마디로 의미없는 작업
-        T = Integer.parseInt(br.readLine());
+//        T = Integer.parseInt(br.readLine());
 
 //        while (T-- > 0) {
             StringTokenizer st = new StringTokenizer(br.readLine());
@@ -99,6 +99,7 @@ public class Cabbage {
     /**
 
      2
+
      7 7 8
      1 1
      1 2
