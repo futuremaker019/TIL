@@ -7,6 +7,7 @@ import java.util.StringTokenizer;
 
 public class pp {
 
+    final static int MAX = 50;
     static boolean[][] map;
 
     public static void main(String[] args) throws IOException {
@@ -19,12 +20,14 @@ public class pp {
         map = new boolean[N + 1][M + 1];
 
         for (int i = 1; i <= N; i++) {
-            String s = br.readLine();
+            String str = br.readLine();
             for (int j = 1; j <= M; j++) {
-                System.out.print(s.charAt(j - 1) + " ");
+                map[i][j] = str.charAt(j - 1) == '|';
+                System.out.print(map[i][j] + " ");
             }
             System.out.println();
         }
+
 
         br.close();
     }
