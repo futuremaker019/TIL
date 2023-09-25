@@ -54,3 +54,44 @@ public class NumberOfRelatives {
     }
 }
 ```
+
+DFS에서의 재귀에서 해야할 작업과 DFS를 끝내고 나올떄 결과를 담을 작업을 분리해야 한다.
+```java
+class Main {
+
+    /**
+     * dfs 실행부에서는 dfs 실행 후 결과를 확인하는 방식으로 진행한다.
+     * 여기서는 하나의 dfs 실행을 통해 하나의 그룹/덩어리를 변경후 dfs가 종료되고 나오는 과정으로 진행한다.
+     */
+    public static void main(String[] args) {
+        // ...
+
+        int count = 0;
+        for (int i = 1; i <= N; i++) {
+            for (int j = 1; j <= M; j++) {
+                if (map[i][j] != 0) {
+                    dfs(i, j);
+                    count++;
+                }
+            }
+        }
+        
+        // ...
+    }
+
+    /**
+     *  dfs 구현부에서는 dfs 메서드 시작시 데이터를 변경하고 
+     *  재귀를 통한 다음 dfs를 어떻게 갈지 정의한다. 
+     */
+    private static void dfs(int y, int x) {
+        char value = map[y][x];
+        map[y][x] = 0;
+
+        if (value == '-' && map[y][x + 1] == '-')
+            dfs(y, x + 1);
+        if (value == '|' && map[y + 1][x] == '|')
+            dfs(y + 1, x);
+    }
+}
+
+```
