@@ -27,11 +27,13 @@ public class FloorDeco {
     static int M;
 
     private static void dfs(int y, int x) {
-        visited[y][x] = true;
-        if (map[y][x] == '-' && map[y][x + 1] == '-')
+        char value = map[y][x];
+        map[y][x] = 0;
+//        visited[y][x] = true;
+        if (value == '-' && map[y][x + 1] == '-')
             // 내가 - 이고 오른쪽이 - 이면 visited를 true로 변환하기 위해 이동한다.
             dfs(y, x + 1);
-        if (map[y][x] == '|' && map[y + 1][x] == '|')
+        if (value == '|' && map[y + 1][x] == '|')
             // 내가 | 이고 오른쪽이 | 이면 visited를 true로 변환하기 위해 이동한다.
             dfs(y + 1, x);
     }
@@ -45,7 +47,7 @@ public class FloorDeco {
         M = Integer.parseInt(st.nextToken());
 
         map = new char[MAX][MAX];
-        visited = new boolean[MAX][MAX];
+//        visited = new boolean[MAX][MAX];
 
         for (int i = 1; i <= N; i++) {
             String str = br.readLine();
@@ -57,7 +59,8 @@ public class FloorDeco {
         int count = 0;
         for (int i = 1; i <= N; i++) {
             for (int j = 1; j <= M; j++) {
-                if (visited[i][j] == false) {
+//                if (visited[i][j] == false) {
+                if (map[i][j] != 0) {
                     dfs(i, j);
                     count++;
                 }

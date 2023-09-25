@@ -6,6 +6,8 @@ import java.util.StringTokenizer;
 public class Cabbage {
 
     /**
+     *  백준 (1012)
+     *
         1. 인접한 배추 상하좌우로 네 방향으로 이동이 가능Ma함
         2. 총 필요한 지렁이의 개수를 구하라.
 
