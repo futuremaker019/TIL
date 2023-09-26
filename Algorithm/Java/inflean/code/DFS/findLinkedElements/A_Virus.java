@@ -3,7 +3,7 @@ package findLinkedElements;
 import java.io.*;
 import java.util.StringTokenizer;
 
-public class Virus {
+public class A_Virus {
     static boolean[][] graph;
     static boolean[] visited;
     static int N, M;        // N - 노드수, M - 간선수

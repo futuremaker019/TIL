@@ -1,10 +1,9 @@
 package findSameCategories;
 
 import java.io.*;
-import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class Penetration {
+public class B_Penetration {
 
     final static int MAX = 1000 + 10;
     static boolean[][] map;

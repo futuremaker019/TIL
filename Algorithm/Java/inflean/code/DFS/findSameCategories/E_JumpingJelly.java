@@ -3,7 +3,7 @@ package findSameCategories;
 import java.io.*;
 import java.util.StringTokenizer;
 
-public class JumpingJelly {
+public class E_JumpingJelly {
 
     /**
      * - 젤리의 출발점은 항상 가장 왼쪽, 가장 위의 칸이다.

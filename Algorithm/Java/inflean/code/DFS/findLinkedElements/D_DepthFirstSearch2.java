@@ -6,7 +6,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.StringTokenizer;
 
-public class DepthFirstSearch2 {
+public class D_DepthFirstSearch2 {
 
     /**
      * N개의 정점과 M개의 간선으로 구성된 무방향 그래프가 주어진다. 정점 번호는 1번부터 N번이고 모든 간선의 가중치는 1이다.

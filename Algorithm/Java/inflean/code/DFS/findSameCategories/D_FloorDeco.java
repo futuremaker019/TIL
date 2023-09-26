@@ -3,7 +3,7 @@ package findSameCategories;
 import java.io.*;
 import java.util.StringTokenizer;
 
-public class FloorDeco {
+public class D_FloorDeco {
 
     /**
      * 바닥 장식 (백준 1388)

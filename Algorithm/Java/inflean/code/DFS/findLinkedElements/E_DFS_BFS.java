@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.StringTokenizer;
 
-public class DFS_BFS {
+public class E_DFS_BFS {
 
     /**
      * DFS 와 BFS 표현

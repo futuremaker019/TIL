@@ -3,7 +3,7 @@ package findSameCategories;
 import java.io.*;
 import java.util.StringTokenizer;
 
-public class Cabbage {
+public class A_Cabbage {
 
     /**
      *  백준 (1012)

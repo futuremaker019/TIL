@@ -3,7 +3,7 @@ package findSameCategories;
 import java.io.*;
 import java.util.StringTokenizer;
 
-public class Island {
+public class C_Island {
 
     /**
      * 섬은 1, 바다는 0

@@ -3,7 +3,7 @@ package findLinkedElements;
 import java.io.*;
 import java.util.StringTokenizer;
 
-public class NumberOfRelatives {
+public class F_NumberOfRelatives {
 
     /**
      * 촌수계산하기

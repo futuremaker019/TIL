@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.StringTokenizer;
 
-public class TreeParent {
+public class G_TreeParent {
 
     /**
      * 루트없는 트리가 주어짐
