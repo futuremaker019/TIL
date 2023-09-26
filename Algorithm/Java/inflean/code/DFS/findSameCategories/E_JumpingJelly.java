@@ -6,6 +6,9 @@ import java.util.StringTokenizer;
 public class E_JumpingJelly {
 
     /**
+     * 점핑젤리
+     * 백준 16173
+     * 
      * - 젤리의 출발점은 항상 가장 왼쪽, 가장 위의 칸이다.
      * - 젤리가 이동 가능한 방향은 오른쪽과 아래 뿐이다.
      * - 젤리가 가장 오른쪽 가장 아래칸에 도착한다면 젤리의 승리이다.

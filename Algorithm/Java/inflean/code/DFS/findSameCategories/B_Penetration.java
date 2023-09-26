@@ -5,6 +5,12 @@ import java.util.StringTokenizer;
 
 public class B_Penetration {
 
+    /**
+     * 침투
+     * 백준 13565
+     */
+
+
     final static int MAX = 1000 + 10;
     static boolean[][] map;
     static boolean[][] visited;

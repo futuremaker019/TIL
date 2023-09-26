@@ -9,6 +9,9 @@ import java.util.StringTokenizer;
 public class E_DFS_BFS {
 
     /**
+     *  DFS와 BFS
+     * 백준 1260
+     * 
      * DFS 와 BFS 표현
      * 정점의 번호가 가장 적은 것을 먼저 방문한다.
      * 정점은 1번부터 N번까지이다.

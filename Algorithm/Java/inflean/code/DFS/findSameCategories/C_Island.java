@@ -6,6 +6,9 @@ import java.util.StringTokenizer;
 public class C_Island {
 
     /**
+     * 섬의 개수
+     * 백준 4963
+     * 
      * 섬은 1, 바다는 0
      *  중간의 섬을 기준으로 좌, 우, 대각선으로 섬이 연결되어 있음
      *      (포인트는 대각선 또한 신경을 써야 한다는 것)

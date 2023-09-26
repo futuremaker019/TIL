@@ -6,6 +6,7 @@ import java.util.StringTokenizer;
 public class A_Cabbage {
 
     /**
+     * 유기농 배추
      *  백준 (1012)
      *
         1. 인접한 배추 상하좌우로 네 방향으로 이동이 가능Ma함

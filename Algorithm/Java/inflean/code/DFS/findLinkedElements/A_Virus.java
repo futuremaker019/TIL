@@ -4,6 +4,14 @@ import java.io.*;
 import java.util.StringTokenizer;
 
 public class A_Virus {
+
+    /**
+     * 바이러스
+     * 백준 2606
+     * 
+     * 
+     */
+
     static boolean[][] graph;
     static boolean[] visited;
     static int N, M;        // N - 노드수, M - 간선수

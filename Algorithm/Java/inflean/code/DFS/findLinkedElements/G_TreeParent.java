@@ -7,6 +7,9 @@ import java.util.StringTokenizer;
 public class G_TreeParent {
 
     /**
+     * 트리의 부모 찾기
+     * 백준 11725
+     * 
      * 루트없는 트리가 주어짐
      * 이때, 트리의 루트를 1이라고 정했을때, 각 노드의 부모를 구하는 프로그램을 작성하라.
      *
