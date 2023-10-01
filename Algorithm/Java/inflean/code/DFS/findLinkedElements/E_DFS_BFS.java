@@ -79,7 +79,7 @@ public class E_DFS_BFS {
         visited[v] = true;
 
         while (!queue.isEmpty()) {
-            int value = queue.remove(0);
+            int value = queue.remove(0);        // 0번째에서 계속 꺼내고 삭제하면 queue로써 사용이 가능하다.
             System.out.print(value + " ");
 
             for (int i = 1; i <= N; i++) {
