@@ -54,12 +54,17 @@ public class Cabbage_02 {
     }
 
     private static void dfs(int y, int x) {
-        map[y][x] = true;
+        map[y][x] = false;
         for (int i = 0; i < 4; i++) {
             int newY = y + dirY[i];
             int newX = x + dirX[i];
 
-            
+            if (newY >= 0 && newY < N && newX >= 0 && newX < M) {
+                if (map[newY][newX]) {
+                    dfs(newY, newX);
+                }
+            }
+
         }
     }
 }
