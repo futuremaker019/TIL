@@ -6,7 +6,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.StringTokenizer;
 
-public class DepthFirstSearch_02 {
+public class DepthFirstSearch_01_02 {
 
     /**
      *
