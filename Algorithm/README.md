@@ -38,11 +38,10 @@
 필요 알고리즘
 
 - 프로그래머스 ([링크](https://school.programmers.co.kr/learn/challenges?tab=algorithm_practice_kit))
-
   - 필수
     - 완전탐색
     - 정렬
-    - 스택/큐
+    - 스택/큐s
     - 해시
     - DFS/BFS
   - 추가하면 좋은 카테고리
