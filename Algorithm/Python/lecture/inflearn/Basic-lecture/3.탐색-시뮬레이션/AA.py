@@ -1,18 +1,10 @@
-n = int(input())
+n, m = list(map(int, input().split()))
+a = list(map(int, input().split()))
 
-result = []
+cnt = 0
 for i in range(n):
-    value = input()
-    value = value.lower()
-    check = True
-    for j in range(len(value) // 2):
-        if value[j] != value[len(value) - j - 1]:
-            check = False
-        
-    if check:
-        result.append('#{i} YES'.format(i = i + 1))
-    else:
-        result.append('#{i} NO'.format(i = i + 1))
+  for j in range(i + 1, n + 1):
+    if sum(a[i:j]) == m:
+      cnt += 1
 
-for i in result:
-    print(i)
+print(cnt)
