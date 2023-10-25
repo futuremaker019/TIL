@@ -77,10 +77,10 @@ git merge --no-ff branch명
 ```
 
 option)
-|명령어|설명|
-|--|--|
-|--ff <br>(기본 설정)|병합 대상 브랜치가 fast-forward 관계인 경우, 병합커밋이 만들지 않고 브랜치 태깅만 변경됨|
-|--no-ff|fast-forward 관계인 경우에도 반드시 병합커밋을 만든다.|
+| 명령어               | 설명                                                                                     |
+| -------------------- | ---------------------------------------------------------------------------------------- |
+| --ff <br>(기본 설정) | 병합 대상 브랜치가 fast-forward 관계인 경우, 병합커밋이 만들지 않고 브랜치 태깅만 변경됨 |
+| --no-ff              | fast-forward 관계인 경우에도 반드시 병합커밋을 만든다.                                   |
 
 [참고 사이트](https://koreabigname.tistory.com/65)
 
@@ -393,6 +393,18 @@ git stash drop
 ```python
 git stash drop stash@{1}
 ```
+
+<br><br>
+
+
+### submodule
+
+submodule이 포함된 프로젝트 클론 명령어
+
+```vi
+git clone --recurse-submodules [프로젝트 git URL]
+```
+
 
 <br><br>
 
