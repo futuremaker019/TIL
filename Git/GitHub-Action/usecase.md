@@ -54,7 +54,8 @@ jobs:
         with:
           owner: 'owener의  id'
           repository: 'repository 명'
-          access-token: ${{ secrets.API_TOKEN_GITHUB }}
+          access-token: ${{ secrets.API_TOKEN_GITHUB }}       
+          branch: master                                      # 브랜치 명을 
 
       - name: set zip files
         run: |
