@@ -1,0 +1,95 @@
+## github 블로그
+
+### github io 로 블로그 템플릿 설정
+
+`jekyll-theme` 에서 테마 선택
+
+[https://github.com/topics/jekyll-theme](https://github.com/topics/jekyll-theme)
+
+선택한 테마의 github으로 들어가서 `fork` 함
+
+fork 한 repository에 들어가 setting에서 Repository명을 github.io 형태로 변경
+```
+ex) futuremaker019.github.io
+```
+
+`_config.yml` 의 `url` 수정
+```
+url : "https://futuremaker019.github.io"
+```
+
+블로그 들어가서 확인
+
+<br>
+
+### ruby 설치
+
+블로그를 커스터마이징 하기위해 매번 push하여 확인하는 귀찮은 일이 발생하므로 로컬에서 jekyll을 실행하여 수정을 바로 확인하기 위해 Ruby 필요
+
+ [Ruby installer](https://rubyinstaller.org/downloads/)에 접속하여 WITH Devkit 에서 Ruby+Devkit 3.2.2-1 (x84) 다운 및 설치 (jekyll은 32bit라고 함)
+
+> MSYS32는 Window의 cmd에서 Ruby 명령어를 사용할 수 있도록 해준다.
+
+ <img src="./images/ruby.png" width="500"/>
+
+
+<br>
+
+인스톨시 Ruby install 관련 cmd가 나오는데 그냥 엔터로 진행하자
+
+인스톨 완료 후 ruby가 설치 됬는지 ruby 버전확인
+
+```vi
+ruby -v
+```
+
+jekyll ruby gem 설치
+
+```
+gem install bundler jekyll
+```
+
+`jekyll` 버전 확인
+
+```
+jekyll -v
+```
+
+jekyll 실행 명령어
+
+```
+bundle exec jekyll serve
+
+jekyll serve --watch (해보지 않음)
+```
+
+
+
+<br>
+
+### Jekyll 설치가 제대로 되지 않았을 때
+
+jekyll 설치가 제대로 안되서 `jekyll -v` 명령어 실행이 안됨. 아래는 오류 내용
+
+```
+ Could not find jekyll-4.2.2, jekyll-feed-0.15.1, jekyll-soopr-seo-tag-2.7.3, rouge-3.23.0, webrick-1.7.0, addressable-2.8.1, i18n-1.12.0, jekyll-sass-converter-2.2.0, liquid-4.0.3, terminal-table-2.0.0, public_suffix-5.0.0, concurrent-ruby-1.1.10, sassc-2.4.0, listen-3.7.1, unicode-display_width-1.8.0, ffi-1.15.5 in locally installed gems (Bundler::GemNotFound)  
+
+ Run `bundle install` to install missing gems.
+```
+
+아래 친절하게 bundle install 하라는 명령어가 나와 명령어 입력
+
+그리고 실행
+
+```
+undefined method `tainted?' for "/":String (NoMethodError)
+return unless obj.tainted?
+```
+
+여전히 에러
+
+<br>
+
+해결
+
+`GemFile.lock` 파일을 지우고 다시 실행 명령어 입력하니 실행됨 (GemFile.lock 파일이 다시 생성됨)
