@@ -77,10 +77,10 @@ git merge --no-ff branch명
 ```
 
 option)
-| 명령어 | 설명 |
+| 명령어               | 설명                                                                                     |
 | -------------------- | ---------------------------------------------------------------------------------------- |
 | --ff <br>(기본 설정) | 병합 대상 브랜치가 fast-forward 관계인 경우, 병합커밋이 만들지 않고 브랜치 태깅만 변경됨 |
-| --no-ff | fast-forward 관계인 경우에도 반드시 병합커밋을 만든다. |
+| --no-ff              | fast-forward 관계인 경우에도 반드시 병합커밋을 만든다.                                   |
 
 [참고 사이트](https://koreabigname.tistory.com/65)
 
@@ -409,6 +409,20 @@ submodule이 포함된 프로젝트 클론 명령어
 ```vi
 git clone --recurse-submodules [프로젝트 git URL]
 ```
+
+<br><br>
+
+### subtree
+
+상위 리포지토리에 하위 리포지토리를 두고 싶을때 사용했다. 상위 리포지토리에 명시될 이름으로 `prefix`에 작성해준다.
+
+```vi
+git subtree add --prefix=[상위 리포지토리에 명시될 이름] [하위리포지토리 git 주소] [하위리포지토리에서 가져올 branch 명]
+
+ex) git subtree add --prefix=spring-basic https://github.com/furuemaker019/spring-basic.git master
+```
+
+<img src="./image/git-subtree.png" width="600">
 
 <br><br>
 
