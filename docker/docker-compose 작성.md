@@ -55,3 +55,17 @@ docker-compose down
 ```
 docker-compose logs [컨테이너명]
 ```
+
+<br>
+
+### docker-compose.yml 파일 수정 후 반영 & 실행
+
+이미 컨테이너로 서비스가 떠있는 상황에서 변경된 DockerFile, docker-compose.yml 을 적용해서 컨테이너를 재시작하는 방법
+
+```vi
+docker-compose up --build --force-recreate -d
+```
+
+- `--build` : 변경된 이미지를 다시 build
+- `--force-recreate` : docker-compose up 했을시 변경사항이 적용되지 않는다면 해당 플래그를 사용
+- `-d` : 배그라운드에서 컨테이너 실행
