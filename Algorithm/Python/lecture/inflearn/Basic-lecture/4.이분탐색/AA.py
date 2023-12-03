@@ -1,22 +1,18 @@
-n = int(input())
-arr = []
+n, m = map(int, input().split())
+queue = list(map(int, input().split()))
 
-for _ in range(n):
-    p, k = map(int, input().split())
-    arr.append((p, k))
+queue.sort()
 
 cnt = 0
-for i in range(n):
-    tempCnt = 1
-    closeTime = arr[i][1]
-    loopCount = 0
-    while loopCount < n:
-        loopCount += 1
-        for j in range(i, n):
-            if closeTime == arr[j][0]:
-                tempCnt += 1
-                closeTime = arr[j][1]
-    if cnt < tempCnt:
-        cnt = tempCnt
+while queue:
+    w1 = queue[0]
+    w2 = queue[-1]
+    if m >= w1 + w2:
+        queue.pop(0)
+        queue.pop()
+        cnt += 1
+    else:
+        queue.pop()
+        cnt += 1
 
 print(cnt)
