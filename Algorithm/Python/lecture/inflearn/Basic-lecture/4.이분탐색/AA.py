@@ -1,18 +1,25 @@
-n, m = map(int, input().split())
+from collections import deque
+
+n = int(input())
 queue = list(map(int, input().split()))
 
-queue.sort()
-
-cnt = 0
+queue = deque(queue)
+a = []
+maxValue = 0
 while queue:
-    w1 = queue[0]
-    w2 = queue[-1]
-    if m >= w1 + w2:
-        queue.pop(0)
-        queue.pop()
-        cnt += 1
-    else:
-        queue.pop()
-        cnt += 1
+    left = queue[0]
+    if maxValue < left:
+        a.append("L")
+        queue.popleft()
+        maxValue = left
+    if len(queue) > 0:
+        right = queue[-1]
+        if maxValue < right:
+            a.append("R")
+            queue.pop()
+            maxValue = right
+        if maxValue > left and maxValue > right:
+            break
 
-print(cnt)
+print(len(a))
+print("".join(a))
