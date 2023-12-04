@@ -77,10 +77,10 @@ git merge --no-ff branch명
 ```
 
 option)
-| 명령어               | 설명                                                                                     |
+| 명령어 | 설명 |
 | -------------------- | ---------------------------------------------------------------------------------------- |
 | --ff <br>(기본 설정) | 병합 대상 브랜치가 fast-forward 관계인 경우, 병합커밋이 만들지 않고 브랜치 태깅만 변경됨 |
-| --no-ff              | fast-forward 관계인 경우에도 반드시 병합커밋을 만든다.                                   |
+| --no-ff | fast-forward 관계인 경우에도 반드시 병합커밋을 만든다. |
 
 [참고 사이트](https://koreabigname.tistory.com/65)
 
@@ -404,11 +404,34 @@ git stash drop stash@{1}
 
 ### submodule
 
+---
+
 submodule이 포함된 프로젝트 클론 명령어
 
 ```vi
 git clone --recurse-submodules [프로젝트 git URL]
 ```
+
+submodule 직접 수정 후 push 한다. push 후 submodule을 pull 한다.
+
+```vi
+git submodule foreach git pull [원격 리모트명]  [브랜치명]
+ex) git submodule foreach git pull origin master
+```
+
+spring에서 build.gradle에 명시하여 빌드시 submodule을 copy 한다. (gradle build 필요)
+
+```vi
+tasks.register('copySecret') {
+	copy {
+		from 'src/main/resources/stock_backend_config'
+		include "*.yml"
+		into 'src/main/resources'
+	}
+}
+```
+
+출처 : [https://dkswnkk.tistory.com/578](https://dkswnkk.tistory.com/578)
 
 <br><br>
 
