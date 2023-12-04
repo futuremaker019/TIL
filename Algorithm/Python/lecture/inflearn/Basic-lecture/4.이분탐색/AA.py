@@ -1,22 +1,25 @@
+from collections import deque
+
 n = int(input())
-arr = []
+queue = list(map(int, input().split()))
 
-for _ in range(n):
-    p, k = map(int, input().split())
-    arr.append((p, k))
+queue = deque(queue)
+a = []
+maxValue = 0
+while queue:
+    left = queue[0]
+    if maxValue < left:
+        a.append("L")
+        queue.popleft()
+        maxValue = left
+    if len(queue) > 0:
+        right = queue[-1]
+        if maxValue < right:
+            a.append("R")
+            queue.pop()
+            maxValue = right
+        if maxValue > left and maxValue > right:
+            break
 
-cnt = 0
-for i in range(n):
-    tempCnt = 1
-    closeTime = arr[i][1]
-    loopCount = 0
-    while loopCount < n:
-        loopCount += 1
-        for j in range(i, n):
-            if closeTime == arr[j][0]:
-                tempCnt += 1
-                closeTime = arr[j][1]
-    if cnt < tempCnt:
-        cnt = tempCnt
-
-print(cnt)
+print(len(a))
+print("".join(a))
