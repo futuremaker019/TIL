@@ -419,6 +419,12 @@ git submodule foreach git pull [원격 리모트명]  [브랜치명]
 ex) git submodule foreach git pull origin master
 ```
 
+```
+intellij에서 직접 fetch하여 submodule의 origin/master를 최신화 시킴
+그 후 명령어
+git submodule upate --remote 를 이용하여 detached 된 head를 master 브랜치로 옮김
+```
+
 spring에서 build.gradle에 명시하여 빌드시 submodule을 copy 한다. (gradle build 필요)
 
 ```vi
