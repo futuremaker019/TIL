@@ -44,6 +44,13 @@ docker-compose 백그라운드에서 실행
 docker-compose up -d
 ```
 
+- compose 이름을 지정하여 실행할 때
+
+```vim
+docker-compose -f [compose 명] up
+ex) docker-compose -f docker-compose-local.yml up
+```
+
 모든 컨테이너가 삭제되며 실행되고 있는 컨테이너들이 모두 종료된다.
 
 ```vim
