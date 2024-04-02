@@ -5,8 +5,15 @@
 docker 설치 (Amazon Linux 2의 amazon-linux-extras package 를 이용)
 
 ```vi
+// 인스턴스 패키지 및 캐시 업데이트
+sudo yum update -y
+
 // 도커 설치
+// Amazon Linux 2
 sudo amazon-linux-extras install docker
+
+// Amazon Linix 2023
+sudo yum install -y docker
 
 // 도커 시작
 sudo service docker start
@@ -23,6 +30,8 @@ sudo reboot
 // (재접속 후)도커 버전 확인
 docker version    // 명령어 실행 시, 도커 버전 확인되면 docker 설치 및 user 그룹에 포함 잘됬음을 표시
 ```
+
+출처 : [https://docs.aws.amazon.com/ko_kr/serverless-application-model/latest/developerguide/install-docker.html](https://docs.aws.amazon.com/ko_kr/serverless-application-model/latest/developerguide/install-docker.html)
 
 docker compose 설치
 
