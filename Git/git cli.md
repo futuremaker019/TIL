@@ -412,6 +412,12 @@ submodule이 포함된 프로젝트 클론 명령어
 git clone --recurse-submodules [프로젝트 git URL]
 ```
 
+위 명령어에서 `--recursive--submodules`를 명시하지 않고 클론 했을때 아래 명령어를 사용하여 submodule을 최신화 해준다.
+`submodule`이 속한 프로젝트를 새로 clone 시 `submodule`도 같이 로드되도록 만들어주는 명령어 
+```vi
+git submodule update --init --recursive
+```
+
 submodule 직접 수정 후 push 한다. push 후 submodule을 pull 한다.
 
 ```vi
@@ -436,6 +442,7 @@ tasks.register('copySecret') {
 	}
 }
 ```
+
 
 출처 : [https://dkswnkk.tistory.com/578](https://dkswnkk.tistory.com/578)
 

@@ -45,7 +45,9 @@ sudo systemctl is-enabled jenkins
 아래 경로로 들어가 포트를 변경해준다.
 
 ```
+sudo chmod 777 /usr/lib/systemd/system/jenkins.service
 sudo vi /usr/lib/systemd/system/jenkins.service
+sudo chmod 444 /usr/lib/systemd/system/jenkins.service
 ```
 ```
 # 아래 포트를 찾아 변경
@@ -57,3 +59,10 @@ Environment="JENKINS_PORT=8080"
 <img src="../jenkins/images/jenkins-error.png">
 
 친절한 설명과 같이 `systemctl daemon-reload` 명령어 실행 후 jenkins `restart`
+
+```
+sudo systemctl daemon-reload
+sudo systemctl restart jenkins
+```
+
+서버가 재기동되면 포트가 다시 8080으로 돌아온다. 어떻게 해결할지 생각하자.
