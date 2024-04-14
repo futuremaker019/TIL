@@ -50,12 +50,19 @@ alpine 버전의 경우에는 redis.conf 파일의 위치 확인이 안됨
 
 # 정보확인
 127.0.0.1:6379> keys *
-(Empty List)
+(Empty array)
+```
 
-# 비밀번호도 함께 작성하여 접속한다.
-127.0.0.1:6379> redis -a [비밀번호]
-# 비밀번호를 이용하여 docker 명령어로 바로 접속
+redis container에서 비밀번호도 함께 작성하여 접속한다.
+```
+/data # redis-cli -a [비밀번호]
+```
+
+host에서 비밀번호를 이용하여 docker 명령어로 바로 접속
+```
 docker exec -it redis redis-cli -a [비밀번호]
 ```
+
+
 
 
