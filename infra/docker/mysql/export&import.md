@@ -19,3 +19,13 @@ docker-compose에 export, import 할 수 있는 디렉토리를 생성하여 vol
 ### Export
 
 export 를 home/export에서 실행하여 host와 연결된 경로에서 export 파일을 가져온다.
+
+### mysql의 컨테이너 리눅스 관리
+
+docker로 mysql 설치시 컨테이너의 리눅스 종류가 `Red Hat Enterprise Linux release 8.6 (Ootpa)`라면 package manager 명령어로 `microdnf`를 사용한다.
+
+```vi
+microdnf install vim
+```
+
+기본적인 컨테이너가 깡통이라 필요한 기능들은 설치해서 사용하자
