@@ -1,5 +1,5 @@
   ```mermaid
-  sequenceDiagram:
+  sequenceDiagram
     autonumber
     client ->> server: 회원가입 요청
     alt 성공한 경우
