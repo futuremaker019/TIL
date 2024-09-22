@@ -424,6 +424,16 @@ git submodule add https://github.com/futuremaker019/carenet-api-config.git src/m
 
 명령어를 입력하면 `.gitmodules` 가 생성되며 path, url을 확인가능하다.
 
+출처 : [https://hudi.blog/git-submodule/](https://hudi.blog/git-submodule/)
+
+#### 서브모듈 포함한 프로젝트 클론
+
+```vi
+git clone --recurse-submodules [super-repo git 주소]
+```
+
+<br>
+
 #### submodule이 포함된 프로젝트 클론 명령어
 
 ```vi
