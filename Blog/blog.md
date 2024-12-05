@@ -93,3 +93,93 @@ return unless obj.tainted?
 해결
 
 `GemFile.lock` 파일을 지우고 다시 실행 명령어 입력하니 실행됨 (GemFile.lock 파일이 다시 생성됨)
+
+---
+<br>
+
+## Mac 에서 jekeyll 실행하기 (Silicon)
+
+### ruby 설치
+
+```vi
+$ gem install bundler jekyll
+```
+
+위 명령어 입력시 에러남
+```vi
+ERROR:  While executing gem ... (Gem::FilePermissionError)
+You don't have write permissions for the /Library/Ruby/Gems/2.6.0 directory.
+```
+
+해결 
+
+```
+$ brew update
+$ brew install rbenv ruby-build
+```
+
+설치된 ruby 버전을 확인하자
+
+```vi
+$ ruby --version
+ruby 3.2.2 (2023-03-30 revision e51014f9c0) [arm64-darwin23]
+```
+
+ruby 버전에 맞는 rbenv 버전으로 설치하자
+
+```
+$ rbenv install -list
+
+3.1.6
+3.2.6
+3.3.6
+jruby-9.4.9.0
+```
+
+3.2.6 버전을 선택하여 설치
+
+```vi
+rbenv install 3.2.6
+```
+
+설치된 rbenv version 확인
+
+```
+rbenv versions
+---
+* system
+3.2.6
+```
+
+global 명령어로 설치된 버전 선택
+
+```
+rbenv global 3.2.6
+```
+
+다시 budler 및 jekyll 설치
+
+```
+$ gem install bundler jekyll
+```
+
+jekyll 버전 확인
+```
+$ jekyll -v 
+---
+jekyll 4.2.2
+```
+
+jekyll 업데이트 함
+
+```
+bundle update jekyll
+```
+
+jekyll 실행
+
+```
+bundle exec jekyll serve
+```
+
+

@@ -346,6 +346,8 @@ git config --global alias.lg 'log --graph --oneline --all'
 
 ### stash
 
+---
+
 변경내용 임시저장
 
 ```python
@@ -406,7 +408,35 @@ git stash drop stash@{1}
 
 ---
 
-submodule이 포함된 프로젝트 클론 명령어
+#### 서브모듈 구성
+
+application.yml을 submodule로 적용하기 위해 작업했다. (보안을 위한 작업)
+
+`sub-repo`를 생성하고 파일을 push한다.
+
+`super-repo`에 `sub-repo`를 등록하기 위해 아래 명령어를 적용한다.
+
+> src/main/resources의 하위에 concert-api-config 디렉토리는 생성하지 말고 명령어를 입력하자
+
+```vi
+git submodule add [sub-repo 주소] [sub-repo가 위치할 경로]
+
+git submodule add https://github.com/futuremaker019/carenet-api-config.git src/main/resources/carenet-api-config
+```
+
+#### 서브모듈 포함한 프로젝트 클론
+
+```vi
+git clone --recurse-submodules [super-repo git 주소]
+```
+
+명령어를 입력하면 `.gitmodules` 가 생성되며 path, url을 확인가능하다.
+
+출처 : [https://hudi.blog/git-submodule/](https://hudi.blog/git-submodule/)
+
+<br>
+
+#### submodule이 포함된 프로젝트 클론 명령어
 
 ```vi
 git clone --recurse-submodules [프로젝트 git URL]

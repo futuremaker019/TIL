@@ -63,6 +63,28 @@ host에서 비밀번호를 이용하여 docker 명령어로 바로 접속
 docker exec -it redis redis-cli -a [비밀번호]
 ```
 
+<br>
+
+### 데이터 조회
+
+
+```java
+/**
+ * 문자열 
+ * GET [key] : 특정키에 저장된 값을 가져온다.
+ */ 
+GET myKey
+
+/**
+ * 해시
+ * HGETALL [key] : 특정 키에 저장된 모든 필드와 값을 가져온다.
+ * HKEYS [key] : 해시의 모든 필드의 key들을 가져온다.
+ * HVALS [key] : 해시의 모든 value를 가져온다.
+ */ 
+HGETALL myKey
+HKEYS myKey
+HVALS myKey
+```
 
 
 
